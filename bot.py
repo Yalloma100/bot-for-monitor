@@ -1,17 +1,3 @@
-import subprocess
-import sys
-
-# Встановлення залежностей з requirements.txt
-def install_dependencies():
-    try:
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
-    except subprocess.CalledProcessError as e:
-        print(f"Failed to install dependencies: {e}")
-        sys.exit(1)
-
-install_dependencies()
-
-
 import requests
 from bs4 import BeautifulSoup
 import telebot
